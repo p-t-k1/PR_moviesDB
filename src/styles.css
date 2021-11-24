@@ -1,0 +1,341 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;1,200;1,300;1,400&family=Outfit:wght@100;200;300;400;500&display=swap');
+
+#bodyBackground{
+    background-color: #000000;
+    color: #ffffff;
+    width: 100%;
+    min-height: 1000px;
+
+}
+
+span:hover{
+    cursor: pointer;
+}
+
+#navbarBackground{
+    background-color: rgba(0, 0, 0, 0);
+    color: #ffffff;
+    width: 100%;
+    height: 65px;
+    padding-left: 5%;
+    padding-right: 5%;
+
+    transition: background-color 0.4s;
+
+    display: flex;
+    align-items: center;
+
+    position: fixed;
+    top: 0;
+}
+.navbarLogin{
+    color: #ffffff;
+    font-family: 'Mulish', sans-serif;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 300;
+    text-transform: uppercase;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+    text-shadow: 5px 3px 5px rgba(0,0,0,0.9);
+    border: 1px solid #999;
+    transition: border 0.2s ease-in;
+    border-radius: 3px;
+
+    left: 440px;
+    position: relative;
+}
+.navbarLogin:hover{
+    border: 1px solid #007ecc;
+    transition: border 0.2s ease;
+}
+
+#navbarText>img{
+   width: 100px;
+}
+#navbarText>#searchIcon{
+    width: 22px;
+    height: 22px;
+    padding-top: 10px;
+}
+
+#movieTitleInput{
+    border-radius: 0px;
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+    font-family: 'Mulish', sans-serif;
+    font-size: 21px;
+    outline: 0;
+    border-width: 0 0 2px;
+    width: 150px;
+    margin-left: 10px;
+    position: relative;
+    top: -3px;
+}
+
+
+#navbarText{
+    color: #ffffff;
+    font-family: 'Mulish', sans-serif;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 300;
+    text-transform: uppercase;
+    margin-left: 20px;
+    margin-right: 20px;
+
+    text-shadow: 5px 3px 5px rgba(0,0,0,0.9);
+
+    box-shadow: inset 0 0px 0 #007ecc;
+    transition: box-shadow 0.2s ease-in-out;
+
+}
+#navbarText{
+    color: #ffffff;
+    font-family: 'Mulish', sans-serif;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 300;
+    text-transform: uppercase;
+    margin-left: 20px;
+    margin-right: 20px;
+
+    text-shadow: 5px 3px 5px rgba(0,0,0,0.9);
+
+    box-shadow: inset 0 0px 0 #007ecc;
+    transition: box-shadow 0.2s ease-in-out;
+
+}
+
+#navbarText:hover{
+    box-shadow: inset 0 -2px 0 #007ecc;
+    transition: box-shadow 0.2s ease-in-out;
+}
+
+#headerImage{
+    background-color: #000000;
+    width: 100%;
+    height: 320px;
+    background-image: url("https://images.alphacoders.com/100/1002901.jpg");
+    background-size: cover;
+    background-position: bottom;
+
+
+
+    -webkit-box-shadow: inset 0px -50px 35px -6px #000000;
+    box-shadow: inset 0px -50px 35px -6px #000000;
+}
+
+#allMoviesBox{
+    width: 90%;
+    min-height: 900px;
+    background-color: #000000;
+    margin:auto;
+    margin-top: 40px;
+}
+
+#allMoviesBoxText{
+    background-color: #000000;
+    font-family: 'Mulish', sans-serif;
+    font-weight: 300;
+    font-size: 24px;
+    letter-spacing: 1px;
+}
+
+#allMovies{
+    background-color: #000000;
+    margin-top: 15px;
+    height: 100%;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+
+#movieBannerDiv{
+    height: 417px;
+    width: 20%;
+    background-color: #000000;
+    padding-top: 10px;
+}
+
+#movieThumbnail{
+    width: 255px;
+    height: 364px;
+    margin-left: 8px;
+}
+
+#movieThumbnail img{
+    width: 100%;
+    border-radius: 5px;
+}
+
+#movieThumbnail img:hover{
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+
+    outline: 1px solid #007ecc;
+    outline-offset: -1px;
+}
+
+
+#movieDesc{
+    background-color: #000000;
+    font-family: 'Mulish', sans-serif;
+    margin-top: 10px;
+    margin-left: 8px;
+
+
+    width: 255px;
+
+
+    white-space: nowrap;
+    overflow:hidden;
+}
+#movieTitle{
+    font-size: 16px;
+    font-weight: 200;
+    /*-webkit-box-shadow: inset -26px 0px 24px -11px #a40e0e;
+    box-shadow: inset -26px 0px 24px -11px #ff0000;*/
+}
+#movieTitle:hover{
+    text-decoration: underline #007ecc;
+}
+
+
+#movieInfo{
+    color: #999999;
+    font-size: 14px;
+    font-weight: 200;
+}
+
+#logo{
+    width: 177px;
+    height: 30px;
+}
+
+#footerDiv{
+    background-color: #000000;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+#footerText{
+    font-family: 'Mulish', sans-serif;
+    color:#ffffff;
+    font-size: 15px;
+    font-weight:400;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 20px;
+}
+#footerText:hover{
+    cursor: pointer;
+}
+
+#smallFooterText{
+    font-family: 'Mulish', sans-serif;
+    color: #999999;
+    font-size: 11px;
+    font-weight:400;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+}
+
+#loginBox{
+    background-color: #000000;
+    width: 80%;
+    margin: auto;
+    min-height: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#loginBox>img{
+    width: 10%;
+}
+
+#loginText{
+     font-family: 'Mulish', sans-serif;
+     color:#ffffff;
+     font-size: 28px;
+     font-weight:400;
+     padding-left: 10px;
+     padding-right: 10px;
+     padding-top: 10px;
+ }
+#loginTextSmall{
+    font-family: 'Mulish', sans-serif;
+    color:#ffffff;
+    font-size: 16px;
+    font-weight:400;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 15px;
+    padding-bottom: 3px;
+    position: relative;
+    left: -100px;
+}
+.loginInput{
+    font-family: 'Mulish', sans-serif;
+    width:250px;
+    height: 40px;
+    border-radius: 5px;
+    border-width: 0 0 0 0px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.loginInput:focus{
+    border-width: 0 0 0 0px;
+    outline: none;
+}
+
+#loginButton{
+    background-color: #007ecc;
+    border-radius: 5px;
+    width:270px;
+    height: 40px;
+    margin-top: 45px;
+    font-family: 'Mulish', sans-serif;
+    font-size: 17px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.4s;
+    cursor: pointer;
+
+}
+#loginButton:hover{
+    background-color: #019bf5;
+    transition: background-color 0.4s;
+}
+#registerButton{
+    background-color: #000000;
+    border-radius: 5px;
+    width:270px;
+    height: 40px;
+    margin-top: 15px;
+    font-family: 'Mulish', sans-serif;
+    font-size: 17px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: border 0.3s;
+    border: 1px solid #999;
+    cursor: pointer;
+}
+#registerButton:hover{
+    border: 1px solid  #019bf5;
+    transition: border 0.3s;
+}
