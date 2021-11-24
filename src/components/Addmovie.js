@@ -2,12 +2,12 @@ import logo from '../logo.svg';
 import '../App.css';
 import '../styles.css';
 
-function Login() {
+function Addmovie() {
   return (
       <div id="bodyBackground">
-        Login
+        Dodaj nowy film
       </div>
   );
 }
 
-export default Login;
+export default Addmovie;

@@ -2,12 +2,12 @@ import logo from '../logo.svg';
 import '../App.css';
 import '../styles.css';
 
-function Login() {
+function Top() {
   return (
       <div id="bodyBackground">
-        Login
+        Najpopularniejsze filmy
       </div>
   );
 }
 
-export default Login;
+export default Top;
