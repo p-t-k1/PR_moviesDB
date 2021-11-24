@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;1,200;1,300;1,400&family=Outfit:wght@100;200;300;400;500&display=swap');
+
+#bodyBackground{
+    background-color: #000000;
+    color: #ffffff;
+    width: 100%;
+    min-height: 1500px;
+
+}
+
+span:hover{
+    cursor: pointer;
+}
+
+#navbarBackground{
+    background-color: rgba(0, 0, 0, 0.0);
+    color: #ffffff;
+    width: 100%;
+    height: 65px;
+    padding-left: 5%;
+    padding-right: 5%;
+
+    transition: background-color 0.4s;
+
+    display: flex;
+    align-items: center;
+
+    position: fixed;
+    top: 0;
+}
+
+#navbarText{
+    color: #ffffff;
+    font-family: 'Mulish', sans-serif;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 300;
+    text-transform: uppercase;
+    margin-left: 20px;
+    margin-right: 20px;
+
+}
+
+#headerImage{
+    background-color: #ad2e50;
+    width: 100%;
+    height: 320px;
+    background-image: url("https://images.squarespace-cdn.com/content/v1/58d09402db29d660e4781a57/1556696270734-B41YNIALY0RZQ7RPFDAB/Avengers+Endgame.jpg?format=1000w");
+    background-size: cover;
+    background-position: bottom;
+
+
+    -webkit-box-shadow: inset 0px -50px 35px -6px #000000;
+    box-shadow: inset 0px -50px 35px -6px #000000;
+}
+
+#allMoviesBox{
+    width: 90%;
+    min-height: 900px;
+    background-color: bisque;
+    margin:auto;
+    margin-top: 40px;
+}
+
+#allMoviesBoxText{
+    background-color: coral;
+    font-family: 'Mulish', sans-serif;
+    font-weight: 300;
+    font-size: 24px;
+    letter-spacing: 1px;
+}
+
+#allMovies{
+    background-color: indianred;
+    margin-top: 15px;
+    height: 100%;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+
+#movieBannerDiv{
+    height: 417px;
+    width: 20%;
+    background-color: darkolivegreen;
+    padding-top: 10px;
+}
+
+#movieThumbnail{
+    width: 255px;
+    height: 364px;
+    margin-left: 8px;
+}
+
+#movieThumbnail img{
+    width: 100%;
+    border-radius: 5px;
+}
+
+#movieThumbnail img:hover{
+    width: 100%;
+    border-radius: 5px;
+
+    outline: 1px solid #007ecc;
+    outline-offset: -1px;
+}
+
+
+#movieDesc{
+    background-color: #000000;
+    font-family: 'Mulish', sans-serif;
+    margin-top: 10px;
+    margin-left: 8px;
+
+
+    width: 255px;
+
+
+    white-space: nowrap;
+    overflow:hidden;
+}
+#movieTitle{
+    font-size: 16px;
+    font-weight: 200;
+    /*-webkit-box-shadow: inset -26px 0px 24px -11px #a40e0e;
+    box-shadow: inset -26px 0px 24px -11px #ff0000;*/
+}
+#movieTitle:hover{
+    text-decoration: underline #007ecc;
+}
+
+
+#movieInfo{
+    color: #999999;
+    font-size: 14px;
+    font-weight: 200;
+}
+
+#logo{
+    width: 177px;
+    height: 30px;
+}
+
+#footerDiv{
+    background-color: #000000;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+#footerText{
+    font-family: 'Mulish', sans-serif;
+    color:#ffffff;
+    font-size: 15px;
+    font-weight:400;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 20px;
+}
+#footerText:hover{
+    cursor: pointer;
+}
+
+#smallFooterText{
+    font-family: 'Mulish', sans-serif;
+    color: #999999;
+    font-size: 11px;
+    font-weight:400;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+}
