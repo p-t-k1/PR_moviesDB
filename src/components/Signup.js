@@ -1,31 +1,33 @@
 import logo from '../logo.svg';
 import '../App.css';
 import '../styles.css';
-import {Link} from "react-router-dom";
 
-function Login() {
+function Signup() {
   return (
       <div id="bodyBackground">
           <form>
-              <div id="loginBox">
+              <div id="registerBox">
                   <img src="https://i.ibb.co/N9G2tKF/logo.png"/>
-                  <span id="loginText">Zaloguj się</span>
+
+                  <span id="loginText">Utwórz nowe konto</span>
                   <span id="loginTextSmall">Login</span>
                   <input type="text" name="login" className="loginInput"/>
+                  <span id="loginTextSmall">Nazwa</span>
+                  <input type="text" name="nazwa" className="loginInput"/>
+                  <span id="loginTextSmall">E-mail</span>
+                  <input type="text" name="email" className="loginInput"/>
                   <span id="loginTextSmall">Hasło</span>
                   <input type="password" name="password" className="loginInput"/>
                   <button type="submit" id="loginButton">
-                      Zaloguj się
+                      Załóż konto
                   </button>
-                  <Link to="/signup" style={{ textDecoration: 'none' }}>
-                      <div id="registerButton">
-                          Nie masz jeszcze konta?
-                      </div>
-                  </Link>
+                  <div id="registerButton">
+                      Potrzebujesz pomocy?
+                  </div>
               </div>
           </form>
       </div>
   );
 }
 
-export default Login;
+export default Signup;

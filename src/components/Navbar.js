@@ -20,9 +20,9 @@ const Navbar = () => {
 
                 <Link to="/" id="navbarText"><img src="https://i.ibb.co/N9G2tKF/logo.png"/></Link>
                 <Link to="/top" id="navbarText"><span>Najlepsze</span></Link>
-                <Link to="/addmovie" id="navbarText"><span>Dodaj film</span></Link>
+                <Link to="/add" id="navbarText"><span>Dodaj film</span></Link>
                 <Link to="/" id="navbarText"><img id="searchIcon" src="https://hbogo.pl/assets/img/search.svg"/><input id="movieTitleInput" type="text"/></Link>
-                <Link to="/login" className="navbarLogin"><span>Zaloguj się</span></Link>
+                <Link to="/signin" className="navbarLogin"><span>Zaloguj się</span></Link>
 
         </div>
     );

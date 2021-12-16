@@ -10,6 +10,8 @@ import Login from "./components/Login";
 import Footer from "./components/Footer";
 import Addmovie from "./components/Addmovie";
 import Top from "./components/Top";
+import Details from "./components/Details";
+import Signup from "./components/Signup";
 
 
 ReactDOM.render(
@@ -17,9 +19,11 @@ ReactDOM.render(
         <React.StrictMode>
             <Navbar/>
             <Routes>
-                <Route path="/login" element={<Login/>} />
-                <Route path="/addmovie" element={<Addmovie/>} />
+                <Route path="/signin" element={<Login/>} />
+                <Route path="/signup" element={<Signup/>} />
+                <Route path="/add" element={<Addmovie/>} />
                 <Route path="/top" element={<Top/>} />
+                <Route path="/details" element={<Details/>} />
                 <Route path="/" exact element={<Homepage/>} />
             </Routes>
             <Footer/>
