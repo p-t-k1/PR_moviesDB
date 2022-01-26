@@ -2,8 +2,26 @@ import logo from '../logo.svg';
 import '../App.css';
 import '../styles.css';
 import MovieBanner from "./MovieBanner";
+import {useEffect, useState} from "react";
+
+const axios = require('axios');
 
 function Homepage() {
+
+    const [movies, setMovies] = useState([])
+
+    useEffect(() => {
+        axios({
+            method: 'get',
+            url: 'https://pr-movies.herokuapp.com/api/movies',
+        }).then((response) => {
+            console.log(response.data);
+            setMovies(response.data)
+        }).catch((error) => {
+            console.log(error);
+        });
+    },[]);
+
     return (
         <div id="bodyBackground">
             <div id="headerImage"></div>
@@ -12,27 +30,11 @@ function Homepage() {
                     Wszystkie filmy
                 </div>
                 <div id="allMovies">
-                    <MovieBanner/>
-                    <MovieBanner/>
-                    <MovieBanner/>
-                    <MovieBanner/>
-                    <MovieBanner/>
-                    <MovieBanner/>
-                    <MovieBanner/>
-                    <MovieBanner/>
-                    <MovieBanner/>
-                    <MovieBanner/>
-                    <MovieBanner/>
-                    <MovieBanner/>
-                    <MovieBanner/>
-                    <MovieBanner/>
-                    <MovieBanner/>
-                    <MovieBanner/>
-                    <MovieBanner/>
-                    <MovieBanner/>
-                    <MovieBanner/>
-                    <MovieBanner/>
-                    <MovieBanner/>
+                    {movies.map((movie) =>
+                            <MovieBanner title={movie.title} image={movie.image} content={movie.content} id={movie.id} key={movie.id}/>
+                    )}
+
+
                 </div>
             </div>
         </div>

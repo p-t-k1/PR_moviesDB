@@ -4,16 +4,26 @@ import '../styles.css';
 import {Link} from "react-router-dom";
 import React from "react";
 
-function MovieBanner() {
+function MovieBanner(props) {
+
+    let image = props.image
+    if (image == null) {
+        image = 'https://koncowkizbudowy.pl/storage/no-images.png'
+    }
+
     return (
         <div id="movieBannerDiv">
-            <Link to="/details" style={{ textDecoration: 'none' }}>
+            <Link
+                to='/details'
+                state={{id:props.id}}
+                style={{textDecoration: 'none'}}
+            >
                 <div id="movieThumbnail">
-                    <img src="//cdn.hbogo.eu/images/3F0EE965-6302-4AAF-ABBB-1B6D25F0803B/295_421.jpg"/>
+                    <img src={image}/>
                 </div>
                 <div id="movieDesc">
-                    <span id="movieTitle" title="Władca Pierścieni: Drużyna Pierścienia">Władca Pierścieni: Drużyna Pierścienia</span><br/>
-                    <span id="movieInfo" title="2001 | przygodowy, fantasy, fantastyczny">2001 | przygodowy, fantasy, fantastyczny</span>
+                    <span id="movieTitle" title="Władca Pierścieni: Drużyna Pierścienia">{props.title}</span><br/>
+                    <span id="movieInfo" title="2001 | przygodowy, fantasy, fantastyczny">{props.content}</span>
                 </div>
             </Link>
         </div>

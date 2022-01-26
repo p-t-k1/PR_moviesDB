@@ -176,6 +176,8 @@ a:visited{
 #movieThumbnail img{
     width: 100%;
     border-radius: 5px;
+    max-width:100%;
+    max-height:100%;
 }
 
 #movieThumbnail img:hover{
@@ -257,7 +259,7 @@ a:visited{
     background-color: #000000;
     width: 80%;
     margin: auto;
-    min-height: 700px;
+    min-height: 670px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -305,6 +307,17 @@ a:visited{
     position: relative;
     left: -100px;
 }
+#successTextSmall{
+    font-family: 'Mulish', sans-serif;
+    color: #59ff56;
+    font-size: 14px;
+    font-weight:400;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 15px;
+    padding-bottom: 3px;
+
+}
 .loginInput{
     font-family: 'Mulish', sans-serif;
     width:250px;
@@ -317,6 +330,16 @@ a:visited{
 .loginInput:focus{
     border-width: 0 0 0 0px;
     outline: none;
+}
+
+.contentInput{
+    font-family: 'Mulish', sans-serif;
+    width:250px;
+    height: 140px;
+    border-radius: 5px;
+    border-width: 0 0 0 0px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 #loginButton{
@@ -366,4 +389,58 @@ button {
     font: inherit;
     cursor: pointer;
     outline: inherit;
+}
+
+#detailsBox {
+    background-color: #000000;
+    width: 80%;
+    height: 400px;
+    margin: auto;
+    padding-top: 100px;
+    display: flex;
+    align-items: center;
+}
+#detailsBoxImage{
+    background-color: #000000;
+    height: 100%;
+    aspect-ratio: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#detailsBoxImage img{
+    height: 90%;
+    border-radius: 25px;
+    border: white;
+}
+
+#detailsBoxInfo{
+    background-color: #000000;
+    width: 100%;
+    height: 90%;
+}
+#detailsTitle{
+    font-family: 'Mulish', sans-serif;
+    font-size: 38px;
+    font-weight: 500;
+}
+
+#detailsContent{
+    font-family: 'Mulish', sans-serif;
+    font-size: 18px;
+    font-weight: 200;
+    color: #999999;
+    margin-top: 10px;
+    display: inline-block;
+    width: 50%;
+}
+#detailsId{
+    font-family: 'Mulish', sans-serif;
+    font-size: 12px;
+    font-weight: 200;
+    color: #999999;
+    margin-top: 10px;
+    display: inline-block;
+    width: 50%;
 }
