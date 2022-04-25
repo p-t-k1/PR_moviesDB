@@ -10,12 +10,12 @@ function Top() {
     const [movies, setMovies] = useState([])
 
     useEffect(() => {
+        window.scrollTo(0, 0)
         axios({
             method: 'get',
             url: 'https://pr-movies.herokuapp.com/api/movies',
         }).then((response) => {
-            console.log(response.data);
-            setMovies(response.data)
+            setMovies(response.data.filter(element=> (element.image && element.image!="" && element.image.includes("https://") && !element.image.includes("gfycat.com" ) && !element.image.includes("twimg.com")&& !element.image.includes("wallpaper" )&&!element.image.includes( "sql-inject")&& element.title!="SPAM")))
         }).catch((error) => {
             console.log(error);
         });
@@ -33,7 +33,7 @@ function Top() {
             <div id="headerImage"></div>
             <div id="allMoviesBox">
                 <div id="allMoviesBoxText">
-                    Najpopularniejsze
+                    Najlepsze propozycje dla Ciebie
                 </div>
                 <div id="allMovies">
                     {getTop10().map((movie) =>

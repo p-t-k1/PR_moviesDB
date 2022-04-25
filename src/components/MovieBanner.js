@@ -12,8 +12,8 @@ function MovieBanner(props) {
     }
 
     return (
-        <div id="movieBannerDiv">
             <Link
+                id="movieBannerDiv"
                 to='/details'
                 state={{id:props.id}}
                 style={{textDecoration: 'none'}}
@@ -22,11 +22,10 @@ function MovieBanner(props) {
                     <img src={image}/>
                 </div>
                 <div id="movieDesc">
-                    <span id="movieTitle" title="Władca Pierścieni: Drużyna Pierścienia">{props.title}</span><br/>
-                    <span id="movieInfo" title="2001 | przygodowy, fantasy, fantastyczny">{props.content}</span>
+                    <span id="movieTitle" title={props.title}>{props.title}</span><br/>
+                    <span id="movieInfo" title={props.content}>{props.content}</span>
                 </div>
             </Link>
-        </div>
     );
 }
 

@@ -1,7 +1,7 @@
 import logo from '../logo.svg';
 import '../App.css';
 import '../styles.css';
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import axios from "axios";
 
 function Signup() {
@@ -10,6 +10,10 @@ function Signup() {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const [info,setInfo] = useState('')
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
 
     const validate = () => {
         if (login === "" || email === "" || password === "") {
@@ -33,7 +37,6 @@ function Signup() {
                 password: password
             }
         }).then((response) => {
-            console.log(response);
             setLogin('')
             setPassword('')
             setEmail('')

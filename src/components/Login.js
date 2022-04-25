@@ -2,16 +2,20 @@ import logo from '../logo.svg';
 import '../App.css';
 import '../styles.css';
 import {Link, useNavigate} from "react-router-dom";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import axios from "axios";
 
 function Login() {
 
-    const [login, setLogin] = useState('')
-    const [password, setPassword] = useState('')
+    const [login, setLogin] = useState('user123')
+    const [password, setPassword] = useState('user123')
     const [info,setInfo] = useState('')
 
     const navigate = useNavigate()
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
 
     const validate = () => {
         if (login === "" || password === "") {
@@ -34,7 +38,6 @@ function Login() {
                 password: password
             }
         }).then((response) => {
-            console.log(response);
             setLogin('')
             setPassword('')
             localStorage.setItem('token',response.data.token)

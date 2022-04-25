@@ -2,19 +2,23 @@ import logo from '../logo.svg';
 import '../App.css';
 import '../styles.css';
 import {Link} from "react-router-dom";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import axios from "axios";
 
 function Addmovie() {
 
-    const [movieTitle, setMovieTitle] = useState('');
-    const [movieContent, setMovieContent] = useState('');
-    const [movieImage, setMovieImage] = useState('');
+    const [movieTitle, setMovieTitle] = useState('Chłopaki nie płaczą');
+    const [movieContent, setMovieContent] = useState('Kuba, młody skrzypek, trafia w sam środek gangsterskich porachunków.');
+    const [movieImage, setMovieImage] = useState('https://fwcdn.pl/fpo/08/43/843/6901032.3.jpg');
     const [successMark, setSuccessMark] = useState(false)
 
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
+
     const validate = () =>{
-        if(movieTitle ==="" || movieContent ==="" ||movieImage ===""){
-            alert('Uzupełnij wszystkie pola')
+        if(movieTitle ==="" || movieContent ==="" ||movieImage ==="" || !movieImage.includes("https:")){
+            alert('Uzupełnij poprawnie wszystkie pola')
             return false
         }
         return true
@@ -34,7 +38,6 @@ function Addmovie() {
                 content: movieContent
             }
         }).then((response) => {
-            console.log(response);
             setSuccessMark(true)
             setMovieTitle('')
             setMovieImage('')
@@ -48,7 +51,7 @@ function Addmovie() {
         <div id="bodyBackground">
             <form onSubmit={handleSubmit}>
                 <div id="loginBox">
-                    <img src="https://i.ibb.co/N9G2tKF/logo.png"/>
+                    <img src="https://i.ibb.co/N9G2tKF/logo.png" style={{marginTop:60}}/>
                     <span id="loginText">Dodaj nowy film</span>
                     <span id="loginTextSmall">Tytuł</span>
                     <input value={movieTitle} type="text" name="title" className="loginInput" onChange={e => setMovieTitle(e.target.value)}/>

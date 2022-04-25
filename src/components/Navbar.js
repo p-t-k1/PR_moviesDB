@@ -2,6 +2,8 @@ import React, {useEffect, useState} from "react";
 import {Link, Navigate, useNavigate} from "react-router-dom";
 import { isExpired, decodeToken  } from "react-jwt";
 import axios from "axios";
+import search from '../search.png'
+import logo from "../logofilmpro.png"
 
 const Navbar = () => {
 
@@ -18,7 +20,6 @@ const Navbar = () => {
             method: 'get',
             url: 'https://pr-movies.herokuapp.com/api/movies',
         }).then((response) => {
-            console.log(response.data);
             setMovies(response.data)
         }).catch((error) => {
             console.log(error);
@@ -33,29 +34,29 @@ const Navbar = () => {
                 userId: user.userId,
             }
         }).then((response) => {
-            console.log(response);
             if(response.data.deletedCount==1){
                 localStorage.removeItem('token')
-                console.log('Wylogowano')
                 window.location.reload();
             }
         }).catch((error) => {
             console.log(error);
         });
     }
-
+    //todo naprawa szukania roznych filmow i tych ktoyvh nie ma
     const searchMovie = (event) =>{
         event.preventDefault()
-        console.log('Szukam filmu: '+searchBar)
-        const found = movies.find(element => element.title == searchBar)
-        console.log(found)
-       /* navigate('details', {
-            screen: 'details',
-            params: { id: found.id },
-        });*/
+        if(searchBar==""){
+            return;
+        }
+        const moviecCleaned = movies.filter(element => element.title != undefined)
+        const found = moviecCleaned.find(element => element.title.toLowerCase().includes(searchBar.toLowerCase()))
+        if(found==undefined){
+            alert("Nie znaleziono danego filmu")
+            setSearchBar("")
+            return false;
+        }
         navigate('/details?id='+found.id,{id:found.id})
-
-       //navigate('/details',{id:'61d84e9d58de31247499c96d'})
+        setSearchBar("")
     }
 
     window.onscroll = function () {
@@ -73,10 +74,10 @@ const Navbar = () => {
     return (
         <div id="navbarBackground">
 
-                <Link to="/" id="navbarText"><img src="https://i.ibb.co/N9G2tKF/logo.png"/></Link>
-                <Link to="/top" id="navbarText"><span>Najlepsze</span></Link>
+                <Link to="/" id="navbarText"><img src={logo}/></Link>
+                <Link to="/top" id="navbarText"><span>Proponowane</span></Link>
                 <Link to="/add" id="navbarText"><span>Dodaj film</span></Link>
-                <Link to="/" id="navbarText"><img onClick={searchMovie} id="searchIcon" src="https://hbogo.pl/assets/img/search.svg"/><input id="movieTitleInput" type="text" onChange={e => setSearchBar(e.target.value)}/></Link>
+                <Link to="/" id="navbarText"><img onClick={searchMovie} id="searchIcon" src={search}/><input id="movieTitleInput" value={searchBar} type="text" onChange={e => setSearchBar(e.target.value)}/></Link>
                 {isNotLogged && <Link to="/signin" className="navbarLogin"><span>Zaloguj się</span></Link>}
                 {!isNotLogged &&<Link to="/" className="navbarLogin"><span onClick={logout}>Wyloguj się</span></Link>}
 

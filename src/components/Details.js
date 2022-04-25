@@ -11,10 +11,8 @@ function Details(props,route) {
     let id = ''
     if(location.state !== null){
          id  = location.state.id
-        console.log('tu')
     }else{
         id=window.location.href.substr(window.location.href.indexOf('=')+1)
-        console.log(id)
     }
 
 
@@ -22,11 +20,11 @@ function Details(props,route) {
     const [movieData, setMovieData] = useState([])
 
     useEffect(() => {
+        window.scrollTo(0, 0)
         axios({
             method: 'get',
             url: 'https://pr-movies.herokuapp.com/api/movies/'+id,
         }).then((response) => {
-            console.log(response.data);
             setMovieData(response.data)
         }).catch((error) => {
             console.log(error);
